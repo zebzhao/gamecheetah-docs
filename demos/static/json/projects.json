@@ -1,0 +1,6 @@
+[
+    {"name": "Isometric Game", "id": 1, "files":"static/json/isometric-demo.json",
+     "swfdev": "static/swf/IsometricDemo-dev.swf", "swfrelease": "static/swf/IsometricDemo-release.swf",
+     "swfwidth": 400, "swfheight": 550,
+     "tarball": "static/src/isometric-demo.tar.gz", "zipball": "static/src/isometric-demo.zip"}
+]
