@@ -1,6 +1,11 @@
 [
-    {"name": "Isometric Game", "id": 1, "files":"static/json/isometric-demo.json",
-     "swfdev": "static/swf/IsometricDemo-dev.swf", "swfrelease": "static/swf/IsometricDemo-release.swf",
-     "swfwidth": 400, "swfheight": 550,
-     "tarball": "static/src/isometric-demo.tar.gz", "zipball": "static/src/isometric-demo.zip"}
+    {"name": "Isometric Game (v1.2a)", "id": 1, "files":"static/json/isometric-demo-v1.2a.json",
+     "swfdev": "static/swf/IsometricDemo-v1.2a-dev.swf", "swfrelease": "static/swf/IsometricDemo-v1.2a-release.swf",
+     "swfwidth": 400, "swfheight": 500,
+     "tarball": "static/src/isometric-demo-v1.2a.tar.gz", "zipball": "static/src/isometric-demo-v1.2a.zip"}
+    ,
+    {"name": "Isometric Game (v1.1)", "id": 2, "files":"static/json/isometric-demo-v1.1.json",
+     "swfdev": "static/swf/IsometricDemo-v1.1-dev.swf", "swfrelease": "static/swf/IsometricDemo-v1.1-release.swf",
+     "swfwidth": 400, "swfheight": 500,
+     "tarball": "static/src/isometric-demo-v1.1.tar.gz", "zipball": "static/src/isometric-demo-v1.1.zip"}
 ]

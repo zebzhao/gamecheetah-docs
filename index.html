@@ -2,102 +2,92 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <title>GameCheetah - AS3 Engine</title>
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <title>GameCheetah - Flash Game Engine</title>
     </head>
 
     <body>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0&appId=349942105216243";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-        
-        <div id="container">
-            <div class="inner">
-
-                <section class="header">
-                    <header>
-                        <img src="../images/logo-small.png" alt="Rawr!" class="logo"/>
-                        <h1>GameCheetah</h1>
-                        <h2>Fast, flexible, free AS3 game engine</h2>
-                        
-                        <div class="links">
-                            <a href="docs/v1.1/">AS3 Docs</a> |
-                            <a href="demos/" class="hilite">Demos</a> |
-                            <a href="http://docs.gamecheetah.net">Getting Started</a> |
-                            <a href="https://github.com/zebzhao/GameCheetah">Github</a>
-                        </div>
-                    </header>
-                    <hr>
-                    
-                    <div class="fb-like" data-href="http://www.gamecheetah.net"
-                         data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
+        <div class="container">
+            <div class="header">
+                <img src="../images/logo.png" alt="Rawr!" class="logo"/>
+                
+                <ul class="links">
+                    <li><a href="/docs/v1.2a">api docs</a></li>
+                    <li><a href="/demos/">demos</a></li>
+                    <li><a href="http://gamecheetah.readthedocs.org">getting started</a></li>
+                    <li><a href="https://github.com/zebzhao/GameCheetah">github</a></li>
+                </ul>
+                <div class="banner">
+                    <p>Rawr! Try building your next flash game with GameCheetah!</p>
+                    <div class="download-buttons">
+                        <a href="/downloads/gamecheetah-v1.2a-dev.swc" class="button">
+                            <span><i class="fa fa-download"></i> Developer (v1.2a) 250kb</span></a>
+                        <a href="/downloads/gamecheetah-v1.2a-release.swc" class="button">
+                            <span><i class="fa fa-download"></i> Release (v1.2a) 74kb</span></a>
                     </div>
-                </section>
-                
-                <h3>Download SWC Libraries</h3>
-                <section id="downloads" class="clearfix">
-                    <a href="downloads/gamecheetah-v1.1-dev.swc" id="download-swc-dev" class="button"><span>Developer V1.1</span></a>
-                    <a href="downloads/gamecheetah-v1.1-release.swc" id="download-swc-release" class="button"><span>Release V1.1</span></a>
-                </section>
-
+                </div>
+            </div>
+            
+            <div class="inner">
                 <section id="main_content">
-                    <h3>What does GameCheetah do?</h3>
-
-                    <p>GameCheetah is a AS3 SWC library created for the purpose of optimizing workflow in prototype game design using FlashDevelop or FlashBuilder.</p>
-
-                    <p>Designed to be light and flexible, GameCheetah is terrific for prototyping many types of 2D bitmap-based games! Some of its many useful features are:</p>
-
-                    <h3>Easy Graphic Management</h3>
-
-                    <p>The Engine provides a simple Flash UI (using <a href="http://www.bit-101.com/minimalcomps/">MinimalComps</a>) in the Developer SWC which provides a clean centralized way to access and manage your sprite sheets, collision objects, as well as live previewing of animations!</p>
-
-                    <h3>Pixel-Perfect Collision Detection</h3>
-
-                    <p>Implementing collision detection has always been a struggle in Flash. Perfect collision detection comes at the cost of performance. GameCheetah offers a simple quadtree search implementation of pixel-perfect collision detection (with rotation) using <a href="https://github.com/martinkallman/collision-as3">collision-as3</a> library.</p>
-
-                    <h3>A Standard Design Pattern!</h3>
-
-                    <p>What really speeds up workflow in game development is utilizing template classes to add game logic. The Entity class in GameCheetah provides basic handlers such as <code>onCollision, onMove, onUpdate, onActivate, onMouseDown, etc...</code>. You can always inherit from Entity derived classes to customize your own handlers!</p>
-
-                    <p>Another advantage is that this creates really modular classes that can be shared with the community as well. Check out the <a href="demos/">demos</a> to see how to build a variety of games using a few simple handlers!</p>
-
-                    <h3>Always free and Open Source</h3>
-
-                    <p>What's great about many AS3 Engines like Flashpunk, is that you can jump right into the source code to figure out what's going on! Which is why GameCheetah is completely free and open sourced so check it out on Github <a href="https://github.com/zebzhao/gamecheetah">here!</a> </p>
+                    <ul class="style">
+                        <li class="fa fa-paw">
+                            <h3>Overview</h3>
+                            <span>GameCheetah is intended to be an AS3 library used for fast, flexible hacking of flash games when using FlashDevelop or FlashBuilder. Designed to be light and flexible, GameCheetah is great for prototyping almost any type of 2D bitmap-based game with every feature carefully thought out to bring value to the workflow of flash game development.</span>
+                        </li>
+                        <li class="fa fa-desktop">
+                            <h3>Simple User Interface</h3>
+                            <span>The Developer SWC provides a friendly flash interface for managing sprite-sheets, modifying collision bitmap masks, tweaking or previewing sprite-sheet animation, in-game performance testing, and much more!</span>
+                        </li>
+                        
+                        <li class="fa fa-cogs">
+                            <h3>Collision Detection</h3>
+                            <span>Implementing fast, precise collision detection has always been a bit of a struggle in Flash. GameCheetah comes with pixel-perfect, rectangle or even point collision detection with rotation and scaling! Implementing a quadtree search with filtering for collision searching, there's enough optimization to not worry about performance!</span>
+                        </li>
+                        
+                        <li class="fa fa-bolt">
+                            <h3>Performance</h3>
+                            <span>GameCheetah is designed with performance in mind. Using bitmap bliting with render culling optimizations and loop-based event-listening, the <a href="/demos/">demos</a> show a remarkable performance for 1600 game objects with no significant lag to game performance! Additionally, the library offers live performance metrics for monitoring performance.</span>
+                        </li>
+                        
+                        <li class="fa fa-cubes">
+                            <h3>Templates</h3>
+                            <span>What can really speed game prototyping is using prebuilt template classes to add game logic. The <code>Entity</code> class in GameCheetah provides most common event handlers. You can always inherit from Entity derived classes to customize your own handlers! Using templates also makes highly modular classes that can be used across projects.<br><br>Check out the <a href="/demos/">demos</a> to see how to build a variety of games using a few simple handlers!</span>
+                        </li>
+                        
+                        <li class="fa fa-code">
+                            <h3>Open Source</h3>
+                            <span>What's great about many AS3 Engines like Flashpunk, is that you can jump right into the source code to figure out what's going on! Which is why GameCheetah is completely free and open sourced so please check it out on <a href="https://github.com/zebzhao/gamecheetah">Github!</a></span>
+                        </li>
+                    </ul>
                 </section>
-                
-                <div class="share-buttons">
-                    <h5>Help spread the word?</h5>
-                    <br>
-                    <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gamecheetah.net">
-                        <img alt='Share on Facebook' src='images/facebook.png'/>
-                    </a>
-                    <a href="http://twitter.com/home?status=Maybe%20it%27s%20time%20to%20rethink%20how%20we%20build%20games%20in%20Flash%21+http%3A%2F%2Fwww.gamecheetah.net">
-                        <img alt='Tweet!' src='images/twitter.png'/>
-                    </a>
-                    <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.gamecheetah.net">
-                        <img alt='Google+' src='images/google.png'/>
-                    </a>
-				</div>
 
                 <footer>
+                    <ul class="icons">
+						<li>
+                            <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-facebook">
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+						<li>
+                            <a href="http://twitter.com/home?status=Maybe%20it%27s%20time%20to%20rethink%20how%20we%20build%20games%20in%20Flash%21+http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-twitter">
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+						<li>
+                            <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-google-plus">
+                                <span>Google+</span>
+                            </a>
+                        </li>
+					</ul>
+                    
                     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
                         <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
                     </a>
-                    <br />
-                    <span>GameCheetah</span> by
+                    <span> GameCheetah</span> by
                     <a href="https://github.com/zebzhao" property="cc:attributionName" rel="cc:attributionURL">Zeb Zhao</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-                    Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
                 </footer>
 
             </div>
@@ -111,23 +101,6 @@
 
             ga('create', 'UA-59924310-1', 'auto');
             ga('send', 'pageview');
-
-            addListener(document.getElementById('download-swc-dev'), 'click', function() {
-              ga('send', 'event', 'button', 'click', 'download-swc-dev', 1.1);
-            });
-
-            addListener(document.getElementById('download-swc-release'), 'click', function() {
-              ga('send', 'event', 'button', 'click', 'download-swc-release', 1.1);
-            });
-
-            /**
-             * Utility to wrap the different behaviors between W3C-compliant browsers
-             * and IE when adding event handlers.
-             */
-            function addListener(element, type, callback) {
-             if (element.addEventListener) element.addEventListener(type, callback);
-             else if (element.attachEvent) element.attachEvent('on' + type, callback);
-            }
         </script>
     </body>
 </html>
