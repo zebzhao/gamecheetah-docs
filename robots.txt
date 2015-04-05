@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /docs/
+Disallow: /demos/
+Disallow: /downloads/
+Disallow: /js/
+Disallow: /images/
+Disallow: /stylesheets/
