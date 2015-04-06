@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /docs/
-Disallow: /demos/
+Disallow: /docs/archive/
 Disallow: /downloads/
 Disallow: /js/
 Disallow: /images/
