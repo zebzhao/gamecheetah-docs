@@ -1,11 +1,1 @@
-[
-    {"name": "Isometric Game (v1.2a)", "id": 1, "files":"static/json/isometric-demo-v1.2a.json",
-     "swfdev": "static/swf/IsometricDemo-v1.2.1a-dev.swf", "swfrelease": "static/swf/IsometricDemo-v1.2.1a-release.swf",
-     "swfwidth": 400, "swfheight": 500,
-     "tarball": "static/src/isometric-demo-v1.2.1a.tar.gz", "zipball": "static/src/isometric-demo-v1.2.1a.zip"}
-    ,
-    {"name": "Isometric Game (v1.1)", "id": 2, "files":"static/json/isometric-demo-v1.1.json",
-     "swfdev": "static/swf/IsometricDemo-v1.1-dev.swf", "swfrelease": "static/swf/IsometricDemo-v1.1-release.swf",
-     "swfwidth": 400, "swfheight": 500,
-     "tarball": "static/src/isometric-demo-v1.1.tar.gz", "zipball": "static/src/isometric-demo-v1.1.zip"}
-]
+[{"swfrelease": "static/swf/isometric-v1.2.1a-release.swf", "files": "static/json/isometric.json", "swfwidth": 400, "swfdev": "static/swf/isometric-v1.2.1a-dev.swf", "tarball": "static/src/isometric-v1.2.1a.tar.gz", "zipball": "static/src/isometric-v1.2.1a.zip", "id": 1, "name": "Isometric", "swfheight": 500}, {"swfrelease": "static/swf/butterfly-v1.2.1a-release.swf", "files": "static/json/butterfly.json", "swfwidth": 450, "swfdev": "static/swf/butterfly-v1.2.1a-dev.swf", "tarball": "static/src/butterfly-v1.2.1a.tar.gz", "zipball": "static/src/butterfly-v1.2.1a.zip", "id": 2, "name": "Butterfly", "swfheight": 450}]

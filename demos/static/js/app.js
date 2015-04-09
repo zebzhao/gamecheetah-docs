@@ -88,6 +88,7 @@
         });
         
         function ProjectList_onAfterSelect(id) {
+            $$("FileList").clearAll();
             $$("FileList").load($$("ProjectList").getSelectedItem().files);
             
             $$("SWFShell").setValues({
