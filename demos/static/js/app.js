@@ -4,98 +4,106 @@
     webix.ready(function () {
         webix.ui({
             type: "line",
-            cols: [
+            rows: [
                 {
-                    width: 200,
-                    rows: [
-                        { view: "template", template: "Demo Projects", type: "section" },
+                    content: "nav-bar",
+                    height: 60
+                },
+                {
+                    cols: [
                         {
-                            view: "list",
-                            id: "ProjectList",
-                            template: "#name#",
-                            select: true, //enables selection 
-                            url: "static/json/projects.json"
-                        },
-                        {
-                            cols: [
+                            width: 200,
+                            rows: [
+                                { view: "template", template: "Demo Projects", type: "section" },
                                 {
-                                    view: "button",
-                                    type: "icon",
-                                    id: "DownloadTarGzBtn",
-                                    icon: "download",
-                                    label: ".tar.gz"
+                                    view: "list",
+                                    id: "ProjectList",
+                                    template: "#name#",
+                                    select: true, //enables selection
+                                    url: "static/json/projects.json"
                                 },
                                 {
-                                    view: "button",
-                                    type: "icon",
-                                    id: "DownloadZipBtn",
-                                    icon: "download",
-                                    label: ".zip"
+                                    cols: [
+                                        {
+                                            view: "button",
+                                            type: "icon",
+                                            id: "DownloadTarGzBtn",
+                                            icon: "download",
+                                            label: ".tar.gz"
+                                        },
+                                        {
+                                            view: "button",
+                                            type: "icon",
+                                            id: "DownloadZipBtn",
+                                            icon: "download",
+                                            label: ".zip"
+                                        }
+                                    ]
+                                },
+                                { view: "template", template: "Source Files", type: "section" },
+                                {
+                                    view: "list",
+                                    id: "FileList",
+                                    template: "#name#",
+                                    select: true, //enables selection
+                                    url: ""
                                 }
                             ]
                         },
-                        { view: "template", template: "Source Files", type: "section" },
+                        {view: "resizer"},
                         {
-                            view: "list",
-                            id: "FileList",
-                            template: "#name#",
-                            select: true, //enables selection 
-                            url: ""
-                        }
-                    ]
-                },
-                {view: "resizer"},
-                {
-                    rows: [
-                        { view: "template", template: "AS3 Code", type: "section" },
-                        {
-                            view: "scrollview",
-                            id: "CodeScrollView",
-                            scroll: "xy",
-                            body: {
-                                template: "<pre><code>#code#</code></pre>",
-                                id: "AS3Shell",
-                                data: {code: ""},
-                                autoheight: true
-                            }
-                        }
-                    ]
-                },
-                {view: "resizer"},
-                {
-                    rows: [
-                        {view: "template", template: "SWF File", type: "section" },
-                        {
-                            view: "toolbar",
-                            type: "clean",
-                            cols: [
-                                { view: "toggle", id: "DeveloperBtn", label: "Developer" },
-                                { view: "toggle", id: "ReleaseBtn", label: "Release" }
+                            rows: [
+                                { view: "template", template: "AS3 Code", type: "section" },
+                                {
+                                    view: "scrollview",
+                                    id: "CodeScrollView",
+                                    scroll: "xy",
+                                    body: {
+                                        template: "<pre><code>#code#</code></pre>",
+                                        id: "AS3Shell",
+                                        data: {code: ""},
+                                        autoheight: true
+                                    }
+                                }
                             ]
                         },
+                        {view: "resizer"},
                         {
-                            view: "scrollview",
-                            scroll: "xy",
-                            body: {
-                                id: "SWFShell",
-                                template: '<embed width="#width#" height="#height#" src="#link#" type="application/x-shockwave-flash" pluginspage="https://get.adobe.com/flashplayer""></embed>',
-                                data: {link: ""}
-                            }
+                            rows: [
+                                {view: "template", template: "SWF File", type: "section" },
+                                {
+                                    view: "toolbar",
+                                    type: "clean",
+                                    cols: [
+                                        { view: "toggle", id: "DeveloperBtn", label: "Developer" },
+                                        { view: "toggle", id: "ReleaseBtn", label: "Release" }
+                                    ]
+                                },
+                                {
+                                    view: "scrollview",
+                                    scroll: "xy",
+                                    body: {
+                                        id: "SWFShell",
+                                        template: '<embed width="#width#" height="#height#" src="#link#" type="application/x-shockwave-flash" pluginspage="https://get.adobe.com/flashplayer""></embed>',
+                                        data: {link: ""}
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }
             ]
         });
         
-        function ProjectList_onAfterSelect(id) {
+        function projectList_onAfterSelect(id) {
             $$("FileList").clearAll();
             $$("FileList").load($$("ProjectList").getSelectedItem().files);
             
             $$("SWFShell").setValues({
                 link: $$("ProjectList").getSelectedItem().swfrelease,
-                    width: $$("ProjectList").getSelectedItem().swfwidth,
-                    height: $$("ProjectList").getSelectedItem().swfheight
-                });
+                width: $$("ProjectList").getSelectedItem().swfwidth,
+                height: $$("ProjectList").getSelectedItem().swfheight
+            });
             $$("SWFShell").config.width = $$("ProjectList").getSelectedItem().swfwidth;
             $$("SWFShell").config.height = $$("ProjectList").getSelectedItem().swfheight;
             $$("SWFShell").resize();
@@ -104,7 +112,7 @@
             $$("ReleaseBtn").setValue(true);
         }
         
-        function FileList_onAfterSelect(id) {
+        function fileList_onAfterSelect(id) {
             $$("AS3Shell").setValues({code: hljs.highlight('actionscript', $$("FileList").getSelectedItem().content).value});
             var htmlContainer = $$("AS3Shell").getNode();
             
@@ -152,17 +160,17 @@
         
         $$("ProjectList").attachEvent("onAfterLoad", function (id) {
             $$("ProjectList").select(1, false);
-            ProjectList_onAfterSelect(id);
+            projectList_onAfterSelect(id);
         });
                                       
-        $$("ProjectList").attachEvent("onAfterSelect", ProjectList_onAfterSelect);
+        $$("ProjectList").attachEvent("onAfterSelect", projectList_onAfterSelect);
         
         $$("FileList").attachEvent("onAfterLoad", function (id) {
             $$("FileList").select(1, false);
-            FileList_onAfterSelect(id);
+            fileList_onAfterSelect(id);
         });
 
-        $$("FileList").attachEvent("onAfterSelect", FileList_onAfterSelect);
+        $$("FileList").attachEvent("onAfterSelect", fileList_onAfterSelect);
         
     });
 }());

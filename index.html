@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>GameCheetah - Flash Game Engine</title>
+
         <meta charset="UTF-8">
         <meta name="description" content="actionScript 3.0 game engine library">
         <meta name="keywords" content="gamecheetah,as3,engine,collision,spritesheet">
@@ -9,92 +11,89 @@
         <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <title>GameCheetah - Flash Game Engine</title>
     </head>
 
     <body>
-        <div class="container">
-            <div class="header">
-                <img src="../images/logo.png" alt="Rawr!" class="logo"/>
-                
-                <ul class="links">
-                    <li><a href="/docs/latest/">api docs</a></li>
-                    <li><a href="/demos/">demos</a></li>
-                    <li><a href="http://gamecheetah.readthedocs.org">getting started</a></li>
-                    <li><a href="https://github.com/zebzhao/GameCheetah">github</a></li>
-                </ul>
-                <div class="banner">
-                    <p>Rawr! Try building your next flash game with GameCheetah!</p>
-                    <div class="download-buttons">
-                        <a href="/downloads/gamecheetah-v1.2.1a-dev.swc" id="dn-dev" class="button">
-                            <span><i class="fa fa-download"></i> Developer (v1.2.1a) 248kb</span></a>
-                        <a href="/downloads/gamecheetah-v1.2.1a-release.swc" id="dn-release" class="button">
-                            <span><i class="fa fa-download"></i> Release (v1.2.1a) 71kb</span></a>
-                    </div>
+        <div class="header">
+            <img src="../images/logo.png" alt="Game Cheetah" class="logo"/>
+
+            <ul class="links">
+                <li><a href="/demos/">demos</a></li>
+                <li><a href="/docs/latest/">docs</a></li>
+                <li><a href="http://gamecheetah.readthedocs.org">getting started</a></li>
+                <li><a href="https://github.com/zebzhao/GameCheetah">github</a></li>
+            </ul>
+            <div class="banner">
+                <p>Rawr! Try building your next flash game with GameCheetah!</p>
+                <div class="download-buttons">
+                    <a href="/downloads/gamecheetah-v1.2.1a-dev.swc" id="dn-dev" class="button">
+                        <span><i class="fa fa-download"></i> Developer (v1.2.1a) 248kb</span></a>
+                    <a href="/downloads/gamecheetah-v1.2.1a-release.swc" id="dn-release" class="button">
+                        <span><i class="fa fa-download"></i> Release (v1.2.1a) 71kb</span></a>
                 </div>
             </div>
-            
-            <div class="inner">
-                <section id="main_content">
-                    <ul class="style">
-                        <li class="fa fa-paw">
-                            <h3>Overview</h3>
-                            <span>GameCheetah is intended to be an AS3 library used for fast, flexible prototyping of flash games when using FlashDevelop or FlashBuilder. Designed to be light and flexible, GameCheetah is great for prototyping almost any type of 2D bitmap-based game with every feature carefully thought out to bring value to the development workflow.</span>
-                        </li>
-                        <li class="fa fa-desktop">
-                            <h3>Simple User Interface</h3>
-                            <span>The Developer SWC provides a friendly flash interface for managing sprite-sheets, modifying collision bitmap masks, tweaking or previewing sprite-sheet animation, in-game performance testing, and much more!</span>
-                        </li>
-                        
-                        <li class="fa fa-cogs">
-                            <h3>Collision Detection</h3>
-                            <span>Implementing fast, precise collision detection has always been a bit of a struggle in Flash. GameCheetah comes with pixel-perfect, rectangle or even point collision detection with rotation and scaling! Implementing a quadtree search with filtering for collision searching, there's enough optimization to not worry about performance!</span>
-                        </li>
-                        
-                        <li class="fa fa-bolt">
-                            <h3>Performance</h3>
-                            <span>GameCheetah is designed with performance in mind. The Engine uses bitmap bliting with culling optimizations and loop-based event-listening. The <a href="/demos/">demos</a> show remarkable performance for 60 fps game with 1600 game objects without much lag! Additionally, the library offers live performance metrics for monitoring performance.</span>
-                        </li>
-                        
-                        <li class="fa fa-cubes">
-                            <h3>Templates</h3>
-                            <span>What can really speed game prototyping is using prebuilt template classes to add game logic. The <code>Entity</code> class in GameCheetah provides most common events used for games. Using these templates also makes your code highly modular allowing for cross-project use.<br><br>Check out the <a href="/demos/">demos</a> to see how to build a variety of games using this concept!</span>
-                        </li>
-                        
-                        <li class="fa fa-code">
-                            <h3>Open Source</h3>
-                            <span>What's great about many AS3 Engines like Flashpunk, is that you can jump right into the source code to figure out what's going on! Which is why GameCheetah is completely free and open sourced so please check it out on <a href="https://github.com/zebzhao/gamecheetah">Github!</a></span>
-                        </li>
-                    </ul>
-                </section>
+        </div>
 
-                <footer>
-                    <ul class="icons">
-						<li>
-                            <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-facebook">
-                                <span>Facebook</span>
-                            </a>
-                        </li>
-						<li>
-                            <a href="http://twitter.com/home?status=Maybe%20it%27s%20time%20to%20rethink%20how%20we%20build%20games%20in%20Flash%21+http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-twitter">
-                                <span>Twitter</span>
-                            </a>
-                        </li>
-						<li>
-                            <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-google-plus">
-                                <span>Google+</span>
-                            </a>
-                        </li>
-					</ul>
-                    
-                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-                        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
-                    </a>
-                    <span> GameCheetah</span> by
-                    <a href="https://github.com/zebzhao" property="cc:attributionName" rel="cc:attributionURL">Zeb Zhao</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-                </footer>
+        <div class="inner">
+            <section id="main_content">
+                <ul class="style">
+                    <li class="fa fa-paw">
+                        <h3>Overview</h3>
+                        <span>GameCheetah is intended to be an AS3 library used for fast, flexible prototyping of flash games when using FlashDevelop or FlashBuilder. Designed to be light and flexible, GameCheetah is great for prototyping almost any type of 2D bitmap-based game with every feature carefully thought out to bring value to the development workflow.</span>
+                    </li>
+                    <li class="fa fa-desktop">
+                        <h3>Simple User Interface</h3>
+                        <span>The Developer SWC provides a friendly flash interface for managing sprite-sheets, modifying collision bitmap masks, tweaking or previewing sprite-sheet animation, in-game performance testing, and much more!</span>
+                    </li>
 
-            </div>
+                    <li class="fa fa-cogs">
+                        <h3>Collision Detection</h3>
+                        <span>Implementing fast, precise collision detection has always been a bit of a struggle in Flash. GameCheetah comes with pixel-perfect, rectangle or even point collision detection with rotation and scaling! Implementing a quadtree search with filtering for collision searching, there's enough optimization to not worry about performance!</span>
+                    </li>
+
+                    <li class="fa fa-bolt">
+                        <h3>Performance</h3>
+                        <span>GameCheetah is designed with performance in mind. The Engine uses bitmap bliting with culling optimizations and loop-based event-listening. The <a href="/demos/">demos</a> show remarkable performance for 60 fps game with 1600 game objects without much lag! Additionally, the library offers live performance metrics for monitoring performance.</span>
+                    </li>
+
+                    <li class="fa fa-cubes">
+                        <h3>Templates</h3>
+                        <span>What can really speed game prototyping is using prebuilt template classes to add game logic. The <code>Entity</code> class in GameCheetah provides most common events used for games. Using these templates also makes your code highly modular allowing for cross-project use.<br><br>Check out the <a href="/demos/">demos</a> to see how to build a variety of games using this concept!</span>
+                    </li>
+
+                    <li class="fa fa-code">
+                        <h3>Open Source</h3>
+                        <span>What's great about many AS3 Engines like Flashpunk, is that you can jump right into the source code to figure out what's going on! Which is why GameCheetah is completely free and open sourced so please check it out on <a href="https://github.com/zebzhao/gamecheetah">Github!</a></span>
+                    </li>
+                </ul>
+            </section>
+
+            <footer>
+                <ul class="icons">
+                    <li>
+                        <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/home?status=Maybe%20it%27s%20time%20to%20rethink%20how%20we%20build%20games%20in%20Flash%21+http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-twitter">
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.gamecheetah.net" class="fa fa-google-plus">
+                            <span>Google+</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+                </a>
+                <span> GameCheetah</span> by
+                <a href="https://github.com/zebzhao" property="cc:attributionName" rel="cc:attributionURL">Zeb Zhao</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+
         </div>
         
         <script type="text/javascript">
